@@ -3,15 +3,15 @@
 {%block content%}
 <h1> Patient Information </h1>
 
-<form method="POST"  > {%csrf_token%}
+<form  method="POST"  > {%csrf_token%}>
+		
 	{% for field in form %}
-	<div class="row">
+	<div class="form-group">
 		{{field.label_tag}} 
-		 {{field}}
+		{{field}}
 		
 	</div>
 	{% endfor %}
-<!--	{{form.as_ul}} -->
 	<button type="submit" class="save btn btn-default">Save</button>  
 </form>
 

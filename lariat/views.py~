@@ -37,6 +37,7 @@ def about(request):
     about_text = "This is a cloud based application where Veterans may answer a screening questionnaire to the pre-operative clinic"
     return render(request,'about.html',context = {'about_text':about_text})
 
+
 def signup(request):
     """
     A method for a simple signup
@@ -47,9 +48,18 @@ def signup(request):
             form.save()
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username = username,password = raw_password)
-            login(request,user)
-            return render('index')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('index')
     else:
-        from = UserCreationForm()
-    return render(request,'signup.html',context = {'form':form})
+        form = UserCreationForm()
+    return render(request, 'signup.html', {'form': form})
+
+def admin(request):
+    """
+    A method to display the content of the table database
+    """
+    form = Patient.objects.all():
+    return render(request,'admin.html',context = {'form':form})
+        
+    

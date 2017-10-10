@@ -53,4 +53,13 @@ def signup(request):
             return redirect('index')
     else:
         form = UserCreationForm()
-    return render(request, 'signup.html', {'form': form})
+    return render(request, 'signup.html', context = {'form': form})
+
+def admin(request):
+    """
+    A method to display the content of the table database
+    """
+    form = Patient.objects.all()
+    return render(request,'admin.html',context = {'form':form})
+        
+    

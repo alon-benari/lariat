@@ -30,4 +30,4 @@ class Patient(models.Model):
       """
       A method to return the name 
       """
-      return self.first_name+self.last_name+self.ssn4
+      return self.first_name+self.last_name+self.SSN
