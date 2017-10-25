@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   
-  {% block title %}<title>Pre-Operative Screening tool</title>{% endblock %}
+  {% block title %}<title>Pre-Operative Screening tool - Beta version please do not enter real PHI</title>{% endblock %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -23,7 +23,7 @@
       <ul class="sidebar-nav">
           <li><a href="{% url 'index' %}">Home</a></li>
 	  <li><a href="{%url 'add_patient'%}">Enter New Patient Information</a></li> 
-          <li><a href="{%url 'admin'%}"admin</a></li>
+          <li><a href="{%url 'admin'%}">admin</a></li>
 	  <li><a href="">Add User</a></li>
 	  <li><a href ="{%url 'signup'%}">Sign up</a></li>
 	  <li><a href ="">contact us </a></li>

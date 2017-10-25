@@ -1,17 +1,31 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<h1>Pre-Operative Screening tool</h1>
 
-  <p>Welcome to the Pre-Operative Screening tools. This tool will allow to screen and prioritize patients for the pre-operative clinic. Please answer the questions to the best of your ability. This will save time and optimize care for all..</p>
 
-<h2>Dynamic content</h2>
+<div class = "container">
+	<div class = "jumbotron">
+		
+		<h1>Welcome to the Pre-Operative Screening Tool</h1>
 
-  <p>Number of patients in the database:</p>
-  <ul>
-    <li><strong>Contacts:</strong> {{ num_patients }}</li>
+		<p>
+		  This tool will allow to screen and prioritize patients for the pre-operative clinic.</br> 
+		  Please answer the questions to the best of your ability. This will save time and optimize care for all.</br>
+		  Thank you for your time and cooperation in helping us delivering care to you and fellow Veterans.</p>
+
+		<h2>Dynamic content</h2>
+
+		<p>Number of patients in the database:</p>
+		<ul>
+		  <li><strong>Contacts:</strong> {{ num_patients }}</li>
    
-  </ul>
+		</ul>
+
+
+	</div>
+</div>	
+
+
 	
 
 {% endblock %}
